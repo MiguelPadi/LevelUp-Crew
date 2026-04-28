@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tareas - LevelUp Crew</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="tasks">
+
+    <div class="background">
+        <!-- BOTÓN -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+            <h3>LevelUp</h3>
+            </div>
+
+            <a href="perfil.html">👤 Cuenta</a>
+            <a href="seccion.html">🔄 Cambiar sección</a>
+            <a href="#">🏆 Logros</a>
+            <a href="#">⚙️ Ajustes</a>
+            <a href="#" onclick="cerrarSesion()">🚪 Cerrar sesión</a>
+
+        </div>
+
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+
+        <img src="nutria.webp" class="otter" alt="nutria">
+
+        <div class="container">
+
+        <!-- HEADER -->
+        <div class="tasks-header">
+            <h2>🎯 Mis Tareas</h2>
+            <p>Completa tus misiones diarias</p>
+        </div>
+
+        <!-- FILTROS -->
+        <div class="task-filters">
+            <button class="filter active" onclick="filtrarTareas('hoy')">Hoy</button>
+            <button class="filter" onclick="filtrarTareas('pendientes')">Pendientes</button>
+            <button class="filter" onclick="filtrarTareas('completadas')">Completadas</button>
+        </div>
+
+        <!-- LISTA -->
+        <div class="tasks-list" id="tasks-list"></div>
+        <!-- NAV -->
+        <div class="bottom-nav">
+
+            <a href="home.html" class="nav-item">
+                <span class="icon">🏠</span>
+                <span class="label">Home</span>
+            </a>
+
+            <a href="ranking.html" class="nav-item">
+                <span class="icon">🏆</span>
+                <span class="label">Ranking</span>
+            </a>
+
+            <a href="tareas.html" class="nav-item active">
+                <span class="icon">🎯</span>
+                <span class="label">Tareas</span>
+            </a>
+
+            <a href="perfil.html" class="nav-item">
+                <span class="icon">👤</span>
+                <span class="label">Perfil</span>
+            </a>
+        
+        </div>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>

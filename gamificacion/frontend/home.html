@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - LevelUp Crew</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="home">
+
+    <div class="background">
+        <!-- BOTÓN -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+                <h3>LevelUp</h3>
+            </div>
+
+            <a href="perfil.html">👤 Cuenta</a>
+            <a href="seccion.html">🔄 Cambiar sección</a>
+            <a href="#">🏆 Logros</a>
+            <a href="#">⚙️ Ajustes</a>
+            <a href="#" onclick="cerrarSesion()">🚪 Cerrar sesión</a>
+
+        </div>
+
+        <!-- luces -->
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+
+        <!-- nutria -->
+        <img src="nutria.webp" class="otter" alt="nutria">
+
+        <!-- CONTENIDO -->
+        <div class="container">
+
+            <!-- NIVEL -->
+            <div class="level-section">
+                <h2 id="level-title">LEVEL 1</h2>
+
+                <div class="xp-bar">
+                    <div class="xp-progress" id="xp-progress" style="width:0%"></div>
+                </div>
+
+            </div>
+
+        <!-- PERFIL -->
+        <div class="profile-card">
+            <img src="avatar1.png" class="avatar" onclick="openAvatar()">
+
+            <div>
+                <h3 id="user-name">...</h3>
+                <p id="user-level">Nivel 1</p>
+            </div>
+
+            <div class="xp-gain" id="xp-gain">+0 XP</div>
+        </div>
+
+        <!-- MISIONES -->
+        <div class="missions-card">
+            <h3>Misiones de hoy</h3>
+        </div>
+
+        <!-- PROGRESO -->
+        <div class="progress-card"></div>
+
+            <div class="premium-card">
+
+                <div class="premium-header">
+                    <h3>🔥 Misiones Premium</h3>
+                    <span class="badge">PRO</span>
+                </div>
+
+                <p>Desbloquea misiones avanzadas y gana el doble de XP</p>
+
+                <div class="premium-missions">
+
+                    <div class="premium-item">🧠 Rutina Avanzada</div>
+                    <div class="premium-item">🚀 Soporte Premium</div>
+                    <div class="premium-item">💼 Eliminar ADS</div>
+                    <div class="premium-item">👤 Avatares Premium</div>
+
+                </div>
+
+                <button class="btn-premium">
+                 Desbloquear por $2.99
+                </button>
+            </div>
+
+        </div>
+
+            <!-- NAVBAR -->
+        <div class="bottom-nav">
+
+            <a href="home.html" class="nav-item active">
+                <span class="icon">🏠</span>
+                <span class="label">Home</span>
+            </a>
+
+            <a href="ranking.html" class="nav-item">
+                <span class="icon">🏆</span>
+                <span class="label">Ranking</span>
+            </a>
+
+            <a href="tareas.html" class="nav-item">
+                <span class="icon">🎯</span>
+                <span class="label">Tareas</span>
+            </a>
+
+            <a href="perfil.html" class="nav-item">
+                <span class="icon">👤</span>
+                <span class="label">Perfil</span>
+            </a>
+
+        </div>
+
+    </div>
+
+        <!-- OVERLAY -->
+        <div class="avatar-overlay" id="avatarOverlay" onclick="closeAvatar()"></div>
+
+        <!-- MODAL AVATAR -->
+        <div class="avatar-modal" id="avatarModal">
+
+            <h3>Selecciona tu avatar</h3>
+
+            <div class="avatar-grid">
+
+                <img src="avatar3.png" class="avatar-option">
+        
+                <div class="avatar-option locked">🔒</div>
+                <div class="avatar-option locked">🔒</div>
+                <div class="avatar-option locked">🔒</div>
+                
+            </div>
+
+        </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

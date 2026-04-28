@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - LevelUp Crew</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <!-- BOTÓN -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <h3>LevelUp</h3>
+        </div>
+
+        <a href="perfil.html">👤 Cuenta</a>
+            <a href="seccion.html">🔄 Cambiar sección</a>
+            <a href="#">🏆 Logros</a>
+            <a href="#">⚙️ Ajustes</a>
+            <a href="#" onclick="cerrarSesion()">🚪 Cerrar sesión</a>
+
+        </div>
+
+        <!-- luces -->
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+
+        <!-- nutria -->
+        <img src="nutria.webp" class="otter" alt="nutria">
+
+        <!-- card login -->
+        <div class="login-card">
+
+            <h1>LevelUp Crew</h1>
+
+            
+            <form class="section-form">
+                <a class="btn-secundary" onclick="guardarCategoria(1)">💪 Salud</a>
+                <a class="btn-secundary" onclick="guardarCategoria(2)">🧠 Mente</a>
+                <a class="btn-secundary" onclick="guardarCategoria(3)">✅ Hábitos</a>
+            </form>
+
+        </div>
+        <script src="js/app.js"></script>
+    </div>
+
+</body>
+</html>

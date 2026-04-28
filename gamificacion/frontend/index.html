@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - LevelUp Crew</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="background">
+  
+  <!-- luces -->
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+  
+  <!-- nutria -->
+  <img src="nutria.webp" class="otter" alt="nutria">
+
+  <!-- card login -->
+    <div class="login-card">
+
+        <h1>LevelUp Crew</h1>
+        <p class="subtitle">Empieza tu progreso hoy 🚀</p>
+
+        <!-- TABS -->
+        <div class="tabs">
+            <button class="btn-social google" onclick="switchTab('login')">Iniciar sesión</button>
+            <button class="btn-social google" onclick="switchTab('registro')">Crear cuenta</button>
+        </div>
+
+        <!-- FORMULARIO LOGIN -->
+        <form id="form-login" onsubmit="iniciarSesion(event)">
+            <input type="email" id="login-email" placeholder="Correo electrónico" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+
+        <!-- FORMULARIO REGISTRO -->
+        <form id="form-registro" onsubmit="crearUsuario(event)" style="display:none">
+            <input type="text" id="input-name" placeholder="Nombre de usuario" required>
+            <input type="email" id="input-email" placeholder="Correo electrónico" required>
+            <input type="password" id="input-password" placeholder="Contraseña" required>
+            <button type="submit" class="btn-primary">Crear cuenta</button>
+        </form>
+
+        <div class="divider">o continúa con</div>
+        <button class="btn-social google">Google</button>
+        <button class="btn-social apple">Apple</button>
+
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
