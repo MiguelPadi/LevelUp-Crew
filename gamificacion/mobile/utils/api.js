@@ -1,7 +1,7 @@
  
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export const API = 'http://10.0.2.2:5000/api'; // Android emulator
+export const API = 'http://3.19.242.178:5000/api'; // Android emulator
 // Si usas dispositivo físico cambia por tu IP local: 'http://192.168.x.x:5000/api'
 
 export const getUser = async () => {
