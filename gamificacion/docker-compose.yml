@@ -32,7 +32,7 @@ services:
     environment:
       - REACT_NATIVE_PACKAGER_HOSTNAME=localhost
       - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
-      - API_URL=http://3.19.242.178:5000
+      - API_URL=http://3.134.77.54:5000
     networks:
       - app_network
     stdin_open: true
