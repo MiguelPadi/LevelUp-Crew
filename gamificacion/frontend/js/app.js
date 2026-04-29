@@ -18,7 +18,7 @@ function closeAvatar() {
 
 //////////////////////////////////////////
 
-const API = "http://3.134.77.54:5000/api";
+const API = "https://cattail-trial-stalemate.ngrok-free.dev/api";
 
 // ===============================
 // CREAR USUARIO (LOGIN)
