@@ -431,7 +431,7 @@ function switchTab(tab) {
   const formRegistro = document.getElementById("form-registro");
   const tabs         = document.querySelectorAll(".tab");
 
-   if (!formLogin || !formRegistro) return; // ← agregar esto
+  if (!formLogin || !formRegistro) return; // ← esta línea
 
   if (tab === "login") {
     formLogin.style.display    = "block";
