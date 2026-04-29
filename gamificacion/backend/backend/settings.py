@@ -125,10 +125,6 @@ STATIC_URL = 'static/'
 # al final de settings.py
 CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "https://miguelpadi.github.io",
-]
-
 ASGI_APPLICATION = 'backend.asgi.application'
 
 CHANNEL_LAYERS = {
