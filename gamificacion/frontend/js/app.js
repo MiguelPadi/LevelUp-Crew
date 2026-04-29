@@ -206,7 +206,7 @@ function filtrarTareas(filtro) {
   const hoy  = new Date().toISOString().split("T")[0];
 
   // Actualizar botón activo
-  document.querySelectorAll(".filter").forEach(btn => btn.classList.remove("active"));
+
   document.querySelectorAll(".filter").forEach((btn, i) => {
   btn.classList.remove("active");
   if ((filtro === 'hoy' && i === 0) || 
@@ -418,7 +418,9 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarTareasLista();
   cargarPerfil();
   cargarProgreso();
-  cargarRanking(); 
+
+  if (window.location.pathname.includes("ranking.html")) {
+    cargarRanking();}
 });
 
 // ===============================
@@ -428,6 +430,8 @@ function switchTab(tab) {
   const formLogin    = document.getElementById("form-login");
   const formRegistro = document.getElementById("form-registro");
   const tabs         = document.querySelectorAll(".tab");
+
+   if (!formLogin || !formRegistro) return; // ← agregar esto
 
   if (tab === "login") {
     formLogin.style.display    = "block";
