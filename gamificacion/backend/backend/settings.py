@@ -125,10 +125,11 @@ STATIC_URL = 'static/'
 # al final de settings.py
 CORS_ALLOW_ALL_ORIGINS = True
 
-from corsheaders.defaults import default_headers
-
-CORS_ALLOW_HEADERS = list(default_headers) + [
-    'ngrok-skip-browser-warning',
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://3.134.77.54",
+    "http://3.134.77.54:5000",
 ]
 
 ASGI_APPLICATION = 'backend.asgi.application'

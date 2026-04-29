@@ -1,18 +1,32 @@
 let todasLasTareas = [];
 let todosLosLogros = [];
 
-const API = "https://cattail-trial-stalemate.ngrok-free.dev/api";
+async function apiFetch(url, options = {}) {
+  const defaultHeaders = {
+    'Content-Type': 'application/json',
+  };
 
-// Helper para fetch con ngrok
-function apiFetch(url, options = {}) {
-  return fetch(url, {
+  const config = {
     ...options,
     headers: {
-      "Content-Type": "application/json",
-      "ngrok-skip-browser-warning": "true",
-      ...(options.headers || {})
+      ...defaultHeaders,
+      ...options.headers,
+    },
+  };
+
+  try {
+    const response = await fetch(url, config);
+    
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({}));
+      throw new Error(error.message || `HTTP ${response.status}`);
     }
-  });
+    
+    return response;
+  } catch (error) {
+    console.error('API Error:', error);
+    throw error;
+  }
 }
 
 // ===============================
