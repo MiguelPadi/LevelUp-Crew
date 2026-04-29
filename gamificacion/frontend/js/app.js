@@ -18,7 +18,7 @@ function closeAvatar() {
 
 //////////////////////////////////////////
 
-const API = "http://localhost:5000/api";
+const API = "http://3.134.77.54:5000/api";
 
 // ===============================
 // CREAR USUARIO (LOGIN)
