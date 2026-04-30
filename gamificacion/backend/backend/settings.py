@@ -132,6 +132,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://3.134.77.54:5000",
 ]
 
+ALLOWED_HOSTS = [
+    "levelup-crew.duckdns.org",
+    "3.134.77.54",
+    "localhost"
+]
 ASGI_APPLICATION = 'backend.asgi.application'
 
 CHANNEL_LAYERS = {
